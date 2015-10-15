@@ -10,12 +10,18 @@ An in-browser note-taking application, designed for easy searching of past entri
 
 ## Usage
 
-1) fork the repo
+1) fork the repo 
+
 2) run ```npm install```
+
 3) get elasticsearch running
+
 -- a) download elasticsearch
+
 -- b) in the elasticsearch directory, run ```./bin/elasticsearch```
+
 4) start the server
+
 5) open up a tab in your browser to localhost:3030 and get started!
 
 ## Requirements
