@@ -7,6 +7,7 @@ var router = require('./routes');
 
 var app = express();
 
+// connect to local database
 var elasticsearch = require('elasticsearch');
 var client = new elasticsearch.Client({
   host: 'localhost:9200',
@@ -29,10 +30,10 @@ app.post('*', router.POST);
 
 app.listen(3030);
 
+// ping local database
 client.ping({
   // ping usually has a 3000ms timeout 
   requestTimeout: Infinity,
- 
   // undocumented params are appended to the query string 
   hello: "elasticsearch!"
 }, function (error) {
