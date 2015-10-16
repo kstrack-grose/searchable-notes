@@ -1,0 +1,57 @@
+body {
+  background-color: #ACCFCC;
+  text-align: center;
+  font-size: 16px;
+}
+
+button {
+  background-color: #595241;
+  color: #FCFAE1;
+  height: 30px;
+  width: 90px;
+  font-size: 18px;
+}
+
+textarea {
+  height: 400px;
+  width: 80%;
+  margin: 20 auto 0 auto;
+  padding: auto;
+  font-size: 14px;
+}
+
+.title {
+  background-color: #FCFAE1;
+  color: #4C1B1B;
+  height: 50px;
+  width: 100%;
+  font-size: 30px;
+  margin: 50 auto 10 auto;
+}
+
+.save {
+  height: 40px;
+  width: 80%;
+  font-size: 24px;
+}
+
+.input {
+  width: 300px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.all {
+  width: 200px;
+}
+
+.allNotes {
+  background-color: #FFFFFF;
+  font-size: 14px;
+  width: 80%;
+  margin: 3 auto 3 auto;
+  border: solid #4C1B1B 2px;
+}
+
+.entry {
+}

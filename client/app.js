@@ -83,7 +83,7 @@ angular.module('notesApp', [])
 
   $scope.search = function() {
     $scope.allNotes = [];
-    $scope.laggingSearchTerm = $scope.searchTerm
+    $scope.laggingSearchTerm = $scope.searchTerm;
     Notes.searchFor($scope.searchTerm)
     .then(function(results) {
       var entries = results.data.hits.hits;
@@ -95,6 +95,11 @@ angular.module('notesApp', [])
     .catch(function(err) {
       console.log(new Error(err));
     });
+  };
+
+  $scope.clear = function() {
+    $scope.allNotes = [];
+    $scope.laggingSearchTerm = '';
   };
 
 });

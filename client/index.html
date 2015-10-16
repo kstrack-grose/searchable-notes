@@ -1,34 +1,35 @@
 <html ng-app="notesApp">
 <head>
   <meta charset='utf-8' />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
   <title>NOTES NOTES NOTES</title>
 </head>
 <body>
   <div ng-controller="NotesController">
     <div>
-      <h3>Test:</h3>
-      <p>{{test}}</p>
-    </div>
-    <div>
-      <p>Search Previous Notes: </p>
-      <input class='search' ng-model='searchTerm'>
-      <button type="submit" ng-click="search()" >Search</button>
-    </div>
-
-    <div>
-      <p>Note:</p>
+      <p class="title">take notes below!</p>
       <div>
         <textarea class='notetaking' ng-model="noteMessage"></textarea>
       </div>
-      <button ng-click="submitNote()" >Save</button>
+      <div>
+        <button class="save" ng-click="submitNote()" >save</button>
+      </div>
     </div>
 
     <div>
-      <p> </p>
-      <p> </p>
-      <button ng-click="getNotes()">Get Notes</button>
-      <p>Notes that match your search term, <strong>{{laggingSearchTerm}}</strong></p>
-      <p>{{allNotes}}</p>
+      <p class="title">search previous notes:</p>
+      <input class='input' ng-model='searchTerm'>
+      <button type="submit" ng-click="search()" >search</button>
+      <p class="title">notes that match your search term <strong>{{laggingSearchTerm}}</strong></p>
+      <div class="allNotes" ng-repeat="entry in allNotes">
+        <p class="entry">{{entry}}</p>
+      </div>
+    </div>
+
+    <div>
+      <p class="title">see all previous notes</p>
+      <button class="all" ng-click="getNotes()">get notes</button>
+      <button class="all" ng-click="clear()">clear</button>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
