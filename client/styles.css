@@ -2,6 +2,7 @@ body {
   background-color: #ACCFCC;
   text-align: center;
   font-size: 16px;
+  padding-bottom: 20px;
 }
 
 button {
@@ -53,5 +54,6 @@ textarea {
   border: solid #4C1B1B 2px;
 }
 
-.entry {
+.first {
+  margin-top: 5px;
 }
